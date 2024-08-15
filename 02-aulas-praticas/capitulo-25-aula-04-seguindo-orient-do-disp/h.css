@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+/* ESTILO PARA TELAS NA HORIZONTAL */
+body{
+    background-image: url(../imgs-exercicios/cev-landscape.jpg);
+    background-position: center bottom;
+}

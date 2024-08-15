@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- ESTILIZAÇÃO GERAL DO NOSSO PROJETO -->
+    <style>
+        /* Configurações gerais  */
+        /* Redefindo os padrões de estilo da nossa página */
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            box-sizing: border-box;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        :root{
+        }
+
+        /* Início da estilização dos elementos: */
+        html, body{
+            width: 100vw;
+            height: 100vh;
+            background-color: #233eff;
+        }
+
+        h1{
+            color: whitesmoke;
+            text-shadow: 2px 2px 0px #233eff;
+            padding: 10px;
+        }
+
+        /* Estilização do modo retrato */
+        @media screen and (orientation: portrait){
+            body{
+                background-image: url(../imgs-exercicios/cev-portrait.jpg);
+                background-position: center bottom;
+            }
+        }
+
+        /* Estilização do modo paisagem */
+        @media screen and (orientation: landscape) {
+            body{
+                background-image: url(../imgs-exercicios/cev-landscape.jpg);
+                background-position: left bottom;
+            }            
+        }
+
+    </style>
+    
+    <title>Seguindo a orientação da tela</title>
+</head>
+<body>
+    <h1>ANOTAÇÕES DA AULA</h1>
+    <p>Nessa aula, nós aprendemos a como definir as media queries para a orientação das nossas telas de em um único arquivo de CSS. No caso dessa aula, nós fizemos isso dentro do próprio HTML. <br>
+    Mas você pode colocar isso em um arquivo CSS aparte, <strong>basta inserir a tag: <br>
+        <pre> 
+        <mark>@media screen and (orientation: landscape(horizontal) ou portrait(vertical))&#123;</mark> 
+            
+            body{
+                background-color: red;
+                atributos....
+            }
+
+        &#125;</pre>
+    </strong><br><br>
+    Fato interessante: dentro das media queries, você precisa colocar as tags dos elementos que você irá mexer, ok? Por exemplo, se vc colocou um @media screen and (orientation: portrait) e quer definir como o corpo e os títulos se comportarçao, use as tags desses elementos: h1 e body!
+    </p>
+</body>
+</html>

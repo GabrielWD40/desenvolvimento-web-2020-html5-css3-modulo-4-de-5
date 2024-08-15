@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+/* ESTILO PARA TELAS NA VERTICAL */
+body{
+    background-image: url(../imgs-exercicios/cev-portrait.jpg);
+    background-position: left bottom;
+}

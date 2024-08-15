@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* IMPORTANTE: SEMPRE PESQUISE OS DEVICES BREAKPOINTS NA HORA DE FAZER AS CSS MEDIA QUERIES */
+
+/* CONFIGURAÇÕES PARA IMPRESSORAS */
+@media print{
+   
+    main > h1{
+        color: black;
+        text-shadow: none;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    main{
+        /* Não é necessário colocar o background-image porque a impressora não vai imprimi-lo */
+
+        /* Deixando só a imagem de impressora aparecendo */
+        img#celular    {display: none;}
+        img#tablet     {display: none;}
+        img#impressora {display: block;}
+        img#computador {display: none;}
+        img#televisao  {display: none;}
+
+        /* Estilizando os elementos dentro do body */
+        width: 90vw;
+        border: 1px solid black;
+        padding-top: 10px;
+    }
+
+    /* Essa mensagem irá aparecer depois da tag main */
+    main::after{
+        content: "Essa página foi impressa através do curso em vídeo → www.cursoemvideo.com.br";
+        text-decoration: overline;
+    }
+}
+
+/* CONFIGURAÇÕES PARA TABLETS E IPADS */
+@media screen and (min-width: 481px) and (max-width: 768px){
+    body{
+        background-image: url(../../imgs-exercicios/back-tablet.jpg);
+    }
+
+    main{
+
+        width: 85vw;
+
+        img#celular    {display: none;}
+        img#tablet     {display: block;}
+        img#impressora {display: none;}
+        img#computador {display: none;}
+        img#televisao  {display: none;}
+    }
+}
+
+/* CONFIGURAÇÕES PARA TELA DE COMPUTADORES ATÉ 1024PX */
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    body{
+        background-image: url(../../imgs-exercicios/back-pc.jpg);
+    }
+
+    main{
+        width: 70vw;
+
+        img#impressora {display: none;}
+        img#celular    {display: none;}
+        img#tablet     {display: none;}
+        img#computador {display: block;}
+        img#televisao  {display: none;}
+    }
+}
+
+/* CONFIGURAÇÃO PARA TELAS GRANDES COMO TELEVISÕES E TELAS DE ALTA DEFINIÇÃO */
+@media screen and (min-width: 1024px){
+    body{
+        background-image: url(../../imgs-exercicios/back-tv.jpg);
+    }
+
+    main{
+
+        width: 80vw;
+        background-color: rgba(0, 0, 0, 0.459);
+
+        img#impressora {display: none;}
+        img#celular    {display: none;}
+        img#tablet     {display: none;}
+        img#computador {display: none;}
+        img#televisao  {display: block;}
+    }
+}
